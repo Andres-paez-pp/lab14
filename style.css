@@ -1,1 +1,149 @@
+/* Estilo básico para la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.submenu-items {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    display: none;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.submenu-items li a {
+    padding: 10px;
+}
+
+.submenu:hover .submenu-items {
+    display: block;
+}
+
+.submenu-items li a:hover {
+    background-color: #555;
+}
+
+/* Estilo para el botón de menú en dispositivos móviles */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 1em;
+        text-align: center;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    .nav-open ul {
+        display: flex;
+    }
+
+    .submenu-items {
+        position: static;
+        background-color: #444;
+        width: 100%;
+    }
+
+    .submenu-items li a {
+        padding: 15px;
+    }
+}
+
+/* Añadir espacio adicional para que la navegación no se superponga al contenido */
+body {
+    padding-top: 70px;
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    margin-top: 0;
+}
 
